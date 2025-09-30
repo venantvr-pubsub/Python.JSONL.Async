@@ -57,6 +57,7 @@ def test_concurrent_writes(manager):
     threads = []
 
     def writer_task(thread_id):
+        # noinspection PyShadowingNames
         for i in range(writes_per_thread):
             instance.write({"thread_id": thread_id, "iteration": i})
 
