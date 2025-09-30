@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-jsonl-queue"
+version = "1.0.0"
+authors = [
+    { name = "venantvr", email = "venantvr@gmail.com" },
+]
+description = "Une librairie Python thread-safe et asynchrone pour écrire dans des fichiers JSON Lines (.jsonl)."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [] # Pas de dépendances externes pour le cœur de la librairie
+
+[project.urls]
+"Homepage" = "https://github.com/venantvr-pubsub/Python.JSONL.Async"
+"Bug Tracker" = "https://github.com/venantvr-pubsub/Python.JSONL.Async/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
