@@ -33,4 +33,5 @@ dependencies = [] # Pas de dépendances externes pour le cœur de la librairie
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0",
+    "setuptools"
 ]
