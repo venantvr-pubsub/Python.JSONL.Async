@@ -3,7 +3,8 @@
 [![PyPI version](https://badge.fury.io/py/python-jsonl-queue.svg)](https://badge.fury.io/py/python-jsonl-queue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Une librairie Python simple et robuste pour écrire dans des fichiers JSON Lines (.jsonl) de manière thread-safe, en déportant toutes les opérations d'écriture dans un thread dédié pour ne pas bloquer votre application principale.
+Une librairie Python simple et robuste pour écrire dans des fichiers JSON Lines (.jsonl) de manière thread-safe, en déportant toutes les opérations d'écriture dans un
+thread dédié pour ne pas bloquer votre application principale.
 
 ## Caractéristiques
 
@@ -56,9 +57,11 @@ with AsyncJsonlQueue("output.jsonl") as queue:
 import threading
 from async_jsonl_queue import AsyncJsonlQueue
 
+
 def worker(queue, thread_id):
     for i in range(100):
         queue.write({"thread_id": thread_id, "iteration": i})
+
 
 with AsyncJsonlQueue("concurrent.jsonl") as queue:
     threads = []
@@ -119,6 +122,7 @@ Le format JSON Lines (.jsonl) stocke un objet JSON par ligne :
 ```
 
 Ce format est idéal pour :
+
 - Les logs structurés
 - Les événements d'application
 - Les flux de données à traiter ligne par ligne
