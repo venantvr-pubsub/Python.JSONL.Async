@@ -25,7 +25,7 @@ pip install python-jsonl-queue
 ### Exemple basique
 
 ```python
-from async_jsonl_queue import AsyncJsonlQueue
+from python_jsonl_async import AsyncJsonlQueue
 
 # Créer et démarrer la queue
 queue = AsyncJsonlQueue("output.jsonl")
@@ -43,7 +43,7 @@ queue.stop()
 ### Avec context manager (recommandé)
 
 ```python
-from async_jsonl_queue import AsyncJsonlQueue
+from python_jsonl_async import AsyncJsonlQueue
 
 with AsyncJsonlQueue("output.jsonl") as queue:
     queue.write({"event": "user_login", "user_id": 123})
@@ -55,7 +55,7 @@ with AsyncJsonlQueue("output.jsonl") as queue:
 
 ```python
 import threading
-from async_jsonl_queue import AsyncJsonlQueue
+from python_jsonl_async import AsyncJsonlQueue
 
 
 def worker(queue, thread_id):

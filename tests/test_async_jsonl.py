@@ -4,7 +4,7 @@ import threading
 
 import pytest
 
-from async_jsonl_queue import AsyncJsonlQueue
+from python_jsonl_async import AsyncJsonlQueue
 
 
 ## Fixtures (inchangées)
