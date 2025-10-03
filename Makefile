@@ -16,7 +16,7 @@ PIP = $(VENV_BIN)/pip
 .DEFAULT_GOAL := help
 
 # Declare targets that are not files
-.PHONY: help install install-dev test clean clean-venv venv
+.PHONY: help install install-dev test clean clean-venv venv build
 
 # =============================================================================
 # CORE TARGETS
@@ -37,6 +37,11 @@ install-dev: venv ## 🛠️ Install development tools (like pytest)
 test: install-dev ## 🔬 Run tests with pytest
 	@echo "--- Running tests ---"
 	@$(VENV_BIN)/pytest -v
+
+build: install ## 🏗️ Build the package
+	@echo "--- Building package ---"
+	@$(PIP) install --upgrade build
+	@$(VENV_BIN)/python -m build
 
 clean: ## 🧹 Clean up cache files
 	@echo "--- Cleaning Python cache files ---"
